@@ -41,6 +41,7 @@ body {
   justify-content: space-between;
   background-image: url("/img/background_header.jpg");
   background-position: right;
+  position: relative;
 }
 
 .header__profile {
@@ -59,12 +60,43 @@ body {
   height: 24px;
   margin-left: 14px;
   cursor: pointer;
+  transition: transform 1s;
 }
 
 .header__profile_icon{
   width: 32px;
   height: 32px;
   margin-right: 10px;
+}
+
+.header__window {
+  position: absolute;
+  width: 200px;
+  height: 0;
+  right: 120px;
+  top: 83px;
+  padding: 0 0 0 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: height 1s;
+  overflow: hidden;
+}
+
+.header__window_item {
+  width: 120px;
+  list-style: none;
+  margin-top: 25px;
+  border-bottom: 3px solid black;
+}
+
+.header__window_active {
+  height: 200px;
+  transition: height 1s;
+}
+
+.header__profile_active {
+  transform: rotate(180deg);
+  transition: transform 1s;
 }
 
 .box {
